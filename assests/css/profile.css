@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.name {
+  margin: 50px 0;
+  font-size: 40px;
+  color: #777;
+}
+
+.name span {
+  font-weight: bold;
+  color: #7755ff;
+}
+.profile-info {
+  background-color: white;
+  padding: 20px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border: 1px solid #7755ff;
+}
+
+.profile-info .user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-basis: 50%;
+}
+
+.profile-info img {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.profile-info .userinfo {
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  color: #777;
+}
+
+.profile-info .userinfo span {
+  color: #7755ff;
+  font-size: 30px;
+}
+
+.profile-info .activity {
+  max-height: 100%;
+  flex-basis: 50%;
+  font-size: 20px;
+  position: relative;
+  color: #777;
+  border-left: 3px solid #7755ff;
+}
+
+.profile-info .activity .n-posts,
+.profile-info .activity .n-comments {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profile-info .activity span {
+  color: #7755ff;
+  font-weight: bold;
+  font-size: 50px;
+  margin-right: 20px;
+}
+
+@media (max-width: 767px) {
+  .profile-info {
+    flex-direction: column;
+  }
+  .activity {
+    width: 100%;
+    border: none !important;
+    border-left: 100px solid red;
+    border-top: 3px solid #7755ff !important;
+  }
+  .user {
+    width: 100%;
+    flex-direction: column;
+    justify-content: start;
+  }
+  .userinfo {
+    text-align: start;
+  }
+}
+
+#profile-link {
+  cursor: pointer;
+}
+
+.profile-posts {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column-reverse;
+}

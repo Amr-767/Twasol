@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assests/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assests/css/all.min.css" />
+    <link rel="stylesheet" href="./assests/css/normalize.css" />
+    <link rel="stylesheet" href="./assests/css/register.css" />
+    <link rel="icon" href="assests/images/community.png" type="image/x-icon" />
+    <title>Register</title>
+</head>
+<body>
+    <div class="spinner-container">
+        <div id="spinner" class="spinner">hi</div>
+    </div>
+
+    <span class="alert-container">
+        <span class="alert">
+            <i class="fa-solid fa-check"></i>
+            <p>Welcome! We are happy because you joint us </p>
+        </span>
+    </span>
+    <div class="main">
+        <div class="container">
+            <div class="container-content">
+                <div class="content">
+                    <h1 class="main-heading">Register</h1>
+                    <div class="inputs">
+                        <label for="name">Name:</label>
+                        <input id="name" type="text" placeholder="Type your name"  >
+                        <label for="username">Username:</label>
+                        <input id="username" type="text" placeholder="Type your username"  >
+                        <label for="pass">Password:</label>
+                        <input id="pass" type="password" placeholder="Type your password" >
+                        <label for="email">Eamil:</label>
+                        <input id="email" type="email" placeholder="Type your email" >
+                        <label for="image" id="custom-file-upload">
+                            <i class="fa-solid fa-camera"></i>
+                            <p style="display: inline;">Choose Your Profile Image</p>
+                        </label>
+                        <input id="image" type="file" >
+                        
+                        <div class="send-container">
+                            <button type="submit" id="send" class="send btn btn-success">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="node_modules/axios/dist/axios.min.js"></script>
+    <script src="node_modules/moment/min/moment.min.js"></script>
+    <script src="assests/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assests/js/register.js"></script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="assests/images/community.png" />
+    <link rel="stylesheet" href="assests/css/all.min.css" />
+    <!-- <link rel="stylesheet" href="assests/css/normalize.css" /> -->
+    <link rel="stylesheet" href="assests/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assests/css/style.css" />
+    <link rel="stylesheet" href="assests/css/profile.css" />
+    <title>Profile</title>
+  </head>
+  <body>
+    
+    <div class="spinner-container" id="spinner-container">
+        <div id="spinner" class="spinner"></div>
+  
+      </div>
+      <span class="container-fluid" id="add-post">
+        <i class="fa-solid fa-plus" id="post-btn" data-bs-toggle="modal"
+        data-bs-target="#post-modal"></i>
+      </span>
+      <span class="container-fluid" id="return">
+        <i class="fa-solid fa-arrow-left" id="return-btn"></i>
+      </span>
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+                id="close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <label for="username" class="col-form-label">Username</label>
+                  <input type="text" class="form-control" id="username" />
+                </div>
+                <div class="mb-3">
+                  <label for="pass" class="col-form-label"
+                    >Password</label
+                  >
+                  <input type="password" class="form-control" id="pass"></input>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="button" class="btn btn-success" id="loginbtn">Login</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- modal create post -->
+      <div 
+        class="modal fade"
+        id="post-modal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="title-post-modal">Create new Post</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+                id="close-post-modal"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <label for="title" class="col-form-label">Title</label>
+                  <input type="text" class="form-control" id="title" />
+                </div>
+                <div class="mb-3">
+                  <label for="body" class="col-form-label" style="display: block;"
+                    >body</label
+                  >
+                  <textarea name="" id="body" style="padding: 20px; outline: none; resize: none; width: 100%; border-color: #ddd; height: 60px; border-radius: 10px;"></textarea>
+  
+                </div>
+                <div class="mb-3">
+                  <label for="image" id="custom-file-upload" class="col-form-label" style="display: block;"
+                    ><i class="fa-solid fa-camera"></i>
+                    <p style="display: inline;">Choose Your Post Image</p></label
+                  >
+                  <input type="file" id="image">
+                  <input type="hidden" value="" id="isEdit">
+                </div>
+                
+  
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="button" class="btn btn-success" id="create-post">Create</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <nav class="navbar navbar-expand-md navbar-light bg-light">
+          <div class="container">
+            <a class="navbar-brand mylogo" href="index.html" title="Twasol"
+              ><img
+                src="./assests/images/community.png"
+                style="width: 40px; height: 40px"
+                alt=""
+              />&times; Twasol &times;</a
+            >
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="profile-link">Profile</a>
+                </li>
+              </ul>
+              <div class="d-flex justify-content-end" id="btns-container">
+                <button
+                  type="button"
+                  class="btn btn-outline-success mx-2"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                  id="login"
+                  >
+                  Login
+                </button>
+                <button class="btn btn-outline-success" id="register">Register</button>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div class="name" > <span id="head-name">Unknown</span>'s Profile </div>
+        <div class="profile-info" id="profile-info">
+            <div class="user">
+                <img src="assests/images/user.png" id="user-image" alt="User Image">
+                <div class="userinfo">
+
+                    <h4>Name : <span id="user-name">Unknown</span></h4>
+                    <h4>Username : <span id="user-username">Unknown</span></h4>
+                    <h4>Email : <span id="user-email">Unknown</span></h4>
+                </div>
+            </div>
+            <div class="activity">
+                <div class="n-posts"> <span id="n-posts">Unknown</span> posts</div>
+                <div class="n-comments"><span id="n-comments">Unknown</span> comments</div>
+            </div>
+        </div>
+        <div class="profile-posts" id="profile-posts"></div>
+      </div>
+    <script src="node_modules/axios/dist/axios.min.js"></script>
+    <script src="node_modules/moment/min/moment.min.js"></script>
+    <script src="assests/js/bootstrap.bundle.min.js"></script>
+    <script src="assests/js/import.js"></script>
+    <script src="assests/js/profile.js"></script>
+  </body>
+</html>
